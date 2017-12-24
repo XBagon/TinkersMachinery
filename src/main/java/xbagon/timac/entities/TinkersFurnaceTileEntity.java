@@ -45,6 +45,15 @@ public class TinkersFurnaceTileEntity extends TileEntityFurnace{
         }
     }
 
+    public NBTTagCompound saveToNbt(NBTTagCompound compound)
+    {
+
+        compound.setInteger("cooktime", cookTime);
+
+
+        return compound;
+    }
+
     @Override
     public NBTTagCompound getUpdateTag() {
         return writeToNBT(new NBTTagCompound());
